@@ -1,0 +1,23 @@
+// Adalah functional component dari card yang telah dibuat
+const Card = (props) => {
+  return (
+    <div class="card">
+        <p class="title">{props.name}</p>
+        <p>{props.job}</p>
+    </div>
+  )
+}
+
+const App = () => {
+  return (
+    <div>
+      <Card name="Rifki Ramadhan" job="Senior Web Developer" />
+      <Card name="Rayani Putri" job="Junior Web Developer" />
+      <Card name="Adrian Ajah" job="Junior Web Desain" />
+    </div>
+  )
+}
+
+
+// Untuk merender component app dari id root yang telah dibuat 
+ReactDOM.render(<App/>, document.querySelector('#root'))

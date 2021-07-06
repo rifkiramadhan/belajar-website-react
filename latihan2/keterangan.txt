@@ -1,0 +1,12 @@
+---- Keterangan Latihan 2 | Cara Create Element Menggunakan Inject / CDN ----
+
+1. Ketika ingin merender component button yang terdapat didalam function sejajar dengan return, maka
+   kita memerlukan preprosessor javascript menggunakan babel
+2. Karena kita tidak menggunakan babel maka kita akan membuat component button dengan style react create element
+   sehingga kita harus membuat button yang cukup kompleks (lumayan panjang)
+2. Hal ini bisa kita gunakan kepada project existing atau project HTML existing kita, namun untuk project yang
+   bisa dibuild dari awal tidak disarankan untuk membuat project react menggunakan link CDN seperti ini Karena
+   kita akan cukup kerepotan mensetup dari awal untuk preprosessor nya karena untuk react kebanyakan menggunakan
+   JSX (javascript x) atau semacam javascript yang dicampur dengan HTML sehingga akan kerepotan kalau untuk mensetup
+   nya
+3. Maka akan lebih baik kita menggunakan CLI nya react yaitu create react

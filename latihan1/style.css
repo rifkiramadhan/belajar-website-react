@@ -1,0 +1,19 @@
+.card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    width: 150px;
+    box-shadow: 0px 2px 2px #ccc;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+p {
+    margin: 0px;
+}

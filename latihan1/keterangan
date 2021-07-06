@@ -1,0 +1,20 @@
+---- Bagaimana cara menggunakan React JS ----
+
+1. Cara :
+    - Menggunakan "Create a New React App", yaitu CLA nya dari react untuk memudahkan membuat sebuah project
+    - Atau kita bise mensetup nya dari nol kita bisa membuat "Build web pack" nya sendiri kemudian kita import
+      library react nya, kita juga bisa menggunakan cara itu
+
+1. Pengertian React-Dom :
+    - React-Dom adalah library yang disediakan untuk merender component yang sudah dibuat dari react ke dom
+      ke (real dom nya)
+    - Karena dalam react ini kita akan menggunakan ES6 (Javascript terbaru), sehingga belum semua browser support
+      dengan sintaks Javascript terbaru tersebut, maka gunakanlah preprosessor javascript (Babel)
+    - Dengan menggunakan Babel maka kita akan membuat sintaks javascript menjadi seperti HTML
+    - Ketika kita telah membuat satu component maka kita telah membuat layaknya seperti HTML
+
+3. Rule React JS:
+    - Return hanya akan membaca satu parent, jika terdapat lebih dari satu maka akan terjadi error (Ada sibling)
+      solusinya bungkus parent menggunakan tag div atau apapun itu
+    - Gunakan props untuk menjadikan website yang menggunakan react menjadi dinamis, jadi component react kita 
+      menerima props untuk merubah content nya menjadi dinamis
