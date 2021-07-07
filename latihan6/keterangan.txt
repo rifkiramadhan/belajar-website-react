@@ -1,0 +1,15 @@
+---- Keterangan Latihan 6 ----
+
+1. Component Props Dinamis
+   - Props digunakan untuk mengupdate konten daripada component yang ingin kita buat menjadi dinamis
+   - Untuk mengupdate sebuah parent dari child nya kita bisa menggunakan props dan props ntu berupa function kemudian
+     function itulah yang bisa mengeksecute atau merubah nilai-nilai dari parent nya
+
+2. State
+   - State memiliki kemampuan ketika dia berubah dia akan merender ulang component di dalamnya atau berada dalam metode render
+     dia akan di render ulang dan dia akan mengganti dengan state yang berubah tersebut
+
+3. Perbedaan StateLess dan StateFull
+   - Ketika kita membuat component dengan StateLess Component kita menggunakan const dan kita bisa mengaksesnya langsung props
+   - Sedangkan ketika kita menggunakan StateFull Component atau class component untuk mengambil props kita tidak bisa kita langsung
+     panggil dengan props saja namun kita perlu menambahkan this.propse

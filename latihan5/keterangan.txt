@@ -1,0 +1,17 @@
+---- Keterangan Latihan 5 ----
+
+1. Component Dinamis
+   - Dimana Component kita bisa kita gunakan berulang dan data yang akan kita gunakan atau kita show dikomponen kita akan berbeda-beda
+   - Untuk membuat Component menjadi dinamis kita menyebutnya dengan istilah props
+   - Di React JS sebuah Component bisa menerima sebuah props dimana props inilah yang berfungsi untuk membuat Component tersebut menjadi
+     dinamis
+   - Fungsi props adalah untuk mengirimkan data kita yang sudah di implementasikan dan data atau props tersebut akan dijadikan value yang
+     menjadikan Component tersebut dinamis
+   - Untuk menggunakan Component kita menjadi rapih kita menggunakan fitur map dari javascript, kita bisa membuat data menjadi data json
+     ataupun object data yang mana data itulah yang akan didapatkan dari API sehingga kita bisa menggunakannya lebih simple lagi dan juga
+     lebih pendek lagi serta lebih mudah
+
+2. Cara Membersihkan dan Merapihkan Component
+   - Rapihkan file import yang tidak perlu untuk digunakan, sehingga di dalam index.js hanya terdapat import yang menyala (digunakan) saja
+   - Ketika ingin membuat banyak komponen maka harus membungkusnya menggunakan tag div
+     

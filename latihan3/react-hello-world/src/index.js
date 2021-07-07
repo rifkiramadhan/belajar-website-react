@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Home from './container/Home/Home';
+
+const HelloWorld = () => {
+    return <p>Hello World!</p>
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <HelloWorld />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,25 @@
+---- Keterangan Latihan 4 ----
+
+1. Cara Membuat Component Pada React JS
+   - StateLess Component
+   - StateFull Component
+   - Ketika kita mmeiliki banyak sekali Component maka akan sangat besar sekali, katakanlah jika ada 10 Component, pasti
+     akan sangat panjang sekali
+   - Untuk membuatnya menjadi lebih rapih lagi kita akan membagi setiap Component kepada folder-folder tertentu untuk memudahkan kita
+
+2. Folder Tiap Component
+   - Folder Component
+     - Yang mana component ini nanti terdiri dari component-component dengan cara StateLess Component (Functional component)
+     - Gunakanlah format file.jsx agar lebih jelas lagi bahwa file ini adalah file jsx didalamnya
+     - Untuk bisa membuat component ini maka diperlukan import React from 'react'; supaya dia bisa membaca tag html atau jsx ini dan
+       di render seagai component
+     - Untuk dapat menggunakan component ini dimana saja maka kita perlu mengexport component kita, contohnya export default HelloComponent;
+       supaya bisa digunakan dimana saja
+     - Untuk memanggil component jsx diperlukan import HelloComponent from './component/HelloComponent'; dan merender menggunakan HelloComponent
+     - Untuk menggunakan styling pada folder component maka nama file css harus sama dengan nama file jsx
+     - Untuk memanggil dan menjalankan styling pada index.js maka diperlukan import './HelloComponent.css'; pada folder jsx yang terdapat stylingnya
+     - Untuk memanggil class seletor pada tag html yang berada pada index.js maka berikan className".text-p" tepat pada tag pembuka p
+
+   - Folder Container
+     - Adalah component-component yang dibuat dengan cara StateFull Component (Class Component)
+     - Caranya sama seperti yang dilakukan folder component
