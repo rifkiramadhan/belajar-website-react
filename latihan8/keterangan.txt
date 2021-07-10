@@ -1,0 +1,98 @@
+---- Keterangan Latihan 7 & 8 ----
+1. Pengertian Sepintas, Bagian dari LifeCycle sebuah component
+   - State
+   - Render
+     - Adalah method yang paling pertama dipanggil oleh react component secara default
+     - Adalah method basic yang harus kita masukkan ketika kita membuat component dengan class component
+   - Component Didmount
+
+2. Yang dipelajari sebelumnya
+   - Cunter yang mengupdate sebuah parent dari child nya
+
+3. LifeCycle
+   - Keterangan lebih lanjut
+     - Link: https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+   - Spesialnya ketika kita membuat component dengan class component kita akan memiliki LifeCycle dari component tersebut
+     1 Mounting
+       - Artinya ketika component itu pertama dipasang (pemasangan component)
+      A. Constructor
+         - Adalah default dari ES6
+           - Contoh:
+             - constructor (props) {
+                    super(props);
+                    this.state = {
+                        count: 1
+                    }
+                } 
+           - Props tidak dapat diupdate, dia hanya menerima nilai masukkan dari luar kemudian dimunculkan dalam component kita
+           - Namun state disini kita bisa memunculkannya dalam component kita, kemudian kita bisa mengupdatenya / nilainya bisa dupdate
+           - Kita dapat mengupdate state yang paling baik pada LifeCycle componentDidMount, jadi setelah component nya dimunculkan ke browser
+             kita dapat mengupdate nilainya
+           - Ketika kita akan mengupdate sebuah component dia akan lari ke pertanyaan shouldComponentUpdate "Haruskah saya mengupdate component tersebut?"
+             caranya adalah melakukan return true; pada shouldComponentUpdate untuk menormalkannya kembali / mengupdatenya
+           - shouldComponentUpdate ini adalah LifeCycle yang sangat berguna untuk meningkatkan performa dari sebuah web, dimana kita bisa memblokir
+             sebuah updatean dari sebuah component
+             - Contoh:
+               - Ketika kita bisa tidak menginginkan component kita diupdate kita bisa mereturn shouldComponentUpdate menjadi false, dengan catatan
+                 terlebih dahulu kita check dulu apakah props nya dengan statenya berubah atau tidak, kalau berubah mungkin kita update, kalau tidak
+                 berubah tidak perlu diupdate
+               - Setelah sub component update dia akan merender dengan state yang baru dan dia akan memanggil getSnapshotBeforeUpdate, jadi dia akan
+                 mengcapture nilai props sebelumnya dengan nilai state sebelumnya
+               - Hal ini bisa kita gunakan untuk LifeCycle yang terakhir yaitu componentDidUpdate, jadi setelah component berhasil diupdate dia akan selesai
+                 di akhir console (updating)
+     2 Updating 
+       - Yaitu ketika component itu kita update
+     3 Unmounting
+       - Ketika component itu dicopot atau hilang dari page kita
+       - Kita bisa menghilangkan LifeCycle kita dengan LifeCycle sebelumnya
+       - Kita bisa membuat state didalam constructor, tetapi kita juga bisa membuat state diluar constructor (didalam component)
+
+   - Gunakanlah inspect element untuk melihat LifeCycle yang kita buat
+   - Menariknya component ketika kita menggunakan class component kita bisa mengupdate value pada component kita menjadi component baru
+     yang kita inginkan
+   - Tidak semua LifeCycle yang ada di React itu perlu sering kita gunakan, tetapi hanya beberapa case saja kita menggunakan LifeCycle kita
+     yang sering digunakan LifeCycle kita bisanya
+     - constructor
+     - render
+     - componentDidMount
+     - componentDidUpdate
+     - componentWillUnmount
+   - Untuk LifeCycle yang lainnya jarang digunakan dan mungkin akan kita gunakan ketika untuk memaximalkan component kita
+   - Untuk mencegah component kita diupdate menggunakan
+     - console.group('shouldComponentUpdate');
+     - console.log('nextProps', nextProps);
+     - console.log('nextStage', nextSate);
+     - Yang terletak pada shouldComponentUpdate
+     - Hal ini digunakan ketika kita sudah menggunakan component yang besar, dinamis dan kompleks seperti contohnya pada product e-commerce
+       kita dapat mengkomparasi ketika nilai count kita lebih banyak dari jumlah barang yang ada maka kita bisa menghentikan proses penambahan
+       barang ke dalam keranjang dengan cara menambahkan kondisi seperti dibawah ini
+       Contoh:
+       - if(nextSate.count >= 4) {
+            return false;
+        }
+        return true;
+    - Disinilah keuntungan2 setelah kita memperdalam dan mempelajari semua lifecycle yang ada
+
+4. Urutan ketika membuat component
+   - Urutan Pertama
+     - constructor
+     - getDerivedStateFromProps
+     - render
+     - componentDidMount
+
+5. Dalam proses pembuatan sebuah component kita mengenal bahwa
+   - Pertama ada proses pemasangan component (Mounting), dimana dalam mounting ini kita memiliki beberap lifecycle yaitu
+     - constructor (Awal)
+     - getDerivedStateFromProps
+     - render
+     - componentDidMount (Selesai)
+   - Kedua, Ketika terjadi update atau ada perubahan nilai untuk component kita maka dia akan lanjut kepada proses memperbaharui
+     (Updateng), proses updating ini juga memiliki lifecycle yang ada
+     - getDerivedStateFromProps (Awal)
+     - shouldComponentUpdate
+     - render
+     - getSnapshotBeforeUpdate
+     - componentDidUpdate (Selesai)
+   - Ketiga, Kemudian ketika component kita diupdate bisa jadi component kita dicabut atau hilang dari halaman tersebut, dan ketika
+     hilang dari halaman tersebut maka akan dipangil lah
+     - componentWillUnmount

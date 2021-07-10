@@ -1,0 +1,27 @@
+---- Keterangan Latihan 9 & 10 ----
+
+1. Pengertian Calling API (Pemanggilan API)
+   - Sample API
+     - https://jsonplaceholder.typicode.com/
+     - https://jsonplaceholder.typicode.com/posts
+   - Sample Image
+     - https://placeimg.com/
+   - Dimana pemanggilan API ini banyak sekali berfungsi ketika website kita sudah mulai menggunakan data-data dari backed atau mungkin
+     data dari open source API, seperti contohnya mungkin kita bisa menggunkan data open source API
+     - Currency
+     - Quran
+     
+2. Cara memanggil API bisa menggunakan
+     - Fetch
+       - Ketika fetch langsung dibuatkan datanya secara langsung
+       - Post digunakan untuk maping data kita, Maka data akan direturn secara dinamis pada website
+       - Setiap post yang di looping dengan map, maka harus menggunakan key, dan key itu harus unik dimana unik ini bisa dihasilkan dari return
+         json, dia memiliki id
+       - Ini adalah pemanggilan API data pengunaan API get menggunakan Fetch, dimana fetch ini sudah disediakan secara default oleh ES6
+     - Axios: https://github.com/axios/axios
+       - Ketika axios memberikan return default dari pemanggilan API seperti ada request, header, dan config, dan yang diperlukan adalah data
+     - Keduanya sama mudahnya ketika memanggil data API, dan keduanya memiliki kelebihannya masing-masing
+       - Kelebhian Axios
+         - Mereturn salah satu headers, dimana beberapa backend ada yang menyimpan token di headers nya sehingga kita bisa mudah memanggil token
+           tersebut ketika menggunakan axios
+         - Menggunakan axios ataupun fetch bisa disesuaikan dengan keperluannya masing-masing

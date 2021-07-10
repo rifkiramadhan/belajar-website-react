@@ -1,0 +1,16 @@
+---- Keterangan Latihan 9 ----
+
+1. Pengertian Calling API (Pemanggilan API)
+   - Sample API
+     - https://jsonplaceholder.typicode.com/
+     - https://jsonplaceholder.typicode.com/posts
+   - Sample Image
+     - https://placeimg.com/
+   - Dimana pemanggilan API ini banyak sekali berfungsi ketika website kita sudah mulai menggunakan data-data dari backed atau mungkin
+     data dari open source API, seperti contohnya mungkin kita bisa menggunkan data open source API
+     - Currency
+     - Quran
+   - Cara memanggil api bisa menggunakan
+     - Fetch
+     - Axios: https://github.com/axios/axios
+    
