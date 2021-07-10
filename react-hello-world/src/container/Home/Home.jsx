@@ -1,8 +1,26 @@
 import React, {Component} from 'react';
-import Product from '../Product/Product';
+import BlogPost from '../BlogPost/BlogPost';
+// import LifeCycleComp from '../LifeCycleComp/LifeCycleComp';
+// import Product from '../Product/Product';
+// import YouTubeComp from '../../component/YoutubeComp/YouTubeComp';
 
 class Home extends Component {
+
+    state = {
+        showComponent: true
+    }
+
+    componentDidMount() {
+        // setTimeout(() => {
+        //     this.setState({
+        //         showComponent: false
+        //     })
+            
+        // }, 15000);
+    }
+
     render() {
+
         return(
             <div>
                 {/* <p>Youtube Component</p>
@@ -25,9 +43,22 @@ class Home extends Component {
                 desc="1k ditonton, 14 hari yang lalu"/>
                 <YouTubeComp/> */}
 
-                <p>Counter</p>
+                {/* <p>Counter</p>
                 <hr />
-                <Product />
+                <Product /> */}
+
+                {/* <p>Life Cycle Component</p>
+                <hr />
+                
+                {
+                    this.state.showComponent ?
+                    <LifeCycleComp/> : null
+                } */}
+
+                <p>Blog Post</p>
+                <hr />
+                <BlogPost/>
+
             </div>
         )
     }
