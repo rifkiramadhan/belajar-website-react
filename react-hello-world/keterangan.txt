@@ -13,4 +13,3 @@
 2. Pengertian Fungsi
    - onChange
      - Yang dimaksud dengan onChange adalah ketika terjadi perubahan pada input tersebut, maka kita melakukan sebuah action tertentu
-       
