@@ -1,27 +1,16 @@
----- Keterangan Latihan 9 & 10 ----
+---- Keterangan Latihan 15 ----
 
-1. Pengertian Calling API (Pemanggilan API)
-   - Sample API
-     - https://jsonplaceholder.typicode.com/
-     - https://jsonplaceholder.typicode.com/posts
-   - Sample Image
-     - https://placeimg.com/
-   - Dimana pemanggilan API ini banyak sekali berfungsi ketika website kita sudah mulai menggunakan data-data dari backed atau mungkin
-     data dari open source API, seperti contohnya mungkin kita bisa menggunkan data open source API
-     - Currency
-     - Quran
-     
-2. Cara memanggil API bisa menggunakan
-     - Fetch
-       - Ketika fetch langsung dibuatkan datanya secara langsung
-       - Post digunakan untuk maping data kita, Maka data akan direturn secara dinamis pada website
-       - Setiap post yang di looping dengan map, maka harus menggunakan key, dan key itu harus unik dimana unik ini bisa dihasilkan dari return
-         json, dia memiliki id
-       - Ini adalah pemanggilan API data pengunaan API get menggunakan Fetch, dimana fetch ini sudah disediakan secara default oleh ES6
-     - Axios: https://github.com/axios/axios
-       - Ketika axios memberikan return default dari pemanggilan API seperti ada request, header, dan config, dan yang diperlukan adalah data
-     - Keduanya sama mudahnya ketika memanggil data API, dan keduanya memiliki kelebihannya masing-masing
-       - Kelebhian Axios
-         - Mereturn salah satu headers, dimana beberapa backend ada yang menyimpan token di headers nya sehingga kita bisa mudah memanggil token
-           tersebut ketika menggunakan axios
-         - Menggunakan axios ataupun fetch bisa disesuaikan dengan keperluannya masing-masing
+1. Keterangan
+   - Melakukan Pemanggilan API PUT
+     - Dimana kalau dalam istilah interaksi dengan API kita mengenal istilah CRUD, untuk Cread utu dengan POST, untuk Update akan kita 
+       pelajari dengan method PUT, untuk read sudah kita pelajari method GET, dan delete sudah kita pelajari dengan method DELETE
+   - Untuk menjalankan server
+     - yart start
+     - npx json-server --watch db.json --port 3004
+   - Untuk menggunakan method PUT dimana itu agak mirip dengan method DELETE, dimana memerlukan id yang mana id ini akan menjadi parameter
+     POST mana atau blockpost mana yang akan diupdate, sehingga ketika kita mengklik update kita harus mengirimkan id mana yang akan diupdate
+
+2. Pengertian Fungsi
+   - onChange
+     - Yang dimaksud dengan onChange adalah ketika terjadi perubahan pada input tersebut, maka kita melakukan sebuah action tertentu
+       
