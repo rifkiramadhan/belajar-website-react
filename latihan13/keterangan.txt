@@ -1,0 +1,13 @@
+---- Keterangan Latihan 13 ----
+
+1. Keterangan
+   - Melakukan Post API
+   - Membuat Form Untuk Post API agar user dapat melakukan CRUD data
+   - Membuat sebuah handler/method ketika input/ketika form berubah
+   - Untuk mendapatkan nilai dari form yang kita input, kita bisa memanggil satu handlerFromChange dan kita memanggil sebuah event dimana ketika
+     kita trigger onChange pada suatu form, maka handlerFromChange aslinya mendapatkan sebuah event
+
+2. Pengertian Fungsi
+   - onChange
+     - Yang dimaksud dengan onChange adalah ketika terjadi perubahan pada input tersebut, maka kita melakukan sebuah action tertentu
+       

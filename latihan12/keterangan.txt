@@ -1,0 +1,18 @@
+---- Keterangan Latihan 11 & 12 ----
+
+1. Keterangan
+   - Melakukan Get data dari API
+   - Json placeholder memiliki kekurangan yaitu
+     - Datanya tidak langsung terupdate atau real update karena memang fake API, sehingga supaya kita bisa merasakan fill berubahnya data, kita
+       perlu menggunakan fitur yang lainnya dari website jsonplaceholder ini
+     - Dimana jsonplaceholder ini menyediakan fitur json server, disini bermaksud bahwa kita membuat fake API dalam local machine kita kedalam
+       komputer/laptop kita hanya dalam setup 30 detik kita bisa membuat fake API mirip dengan sebelumnya
+     - Bedanya ketika fake API dari jsonplaceholder website nya langsung, kita langsung menembak ke website jsonplaceholder atau ke online server
+     - Untuk json server ini kita menembaknya atau mengambil datanya ke local machine kita
+   - Gunakan npx json-server --watch db.json untuk run db.json
+   - Gunakn npx json-server --watch db.json --port 3004 untuk alternative port run db.json, ulangi run port ketika data db.json ada yang diubah
+   - Menariknya ketika kita menggunakan data json server, maka ketika kita menghapusnya data pada database satu persatu akan terhapus dan itu
+     bisa menjadikan API kita terasa API yang nyata
+   - Ketika kita menggunakan dari database jsonplaceholder langusng ketika kita memanggi method delete, maka dia akan mereturn success saja namun
+     datanya tidak berubah, karena hanya effect API di server jsonplaceholder saja
+   - Sedangkan kita sekarang sudah menggunakan API dari local machine kita

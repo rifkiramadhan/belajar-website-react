@@ -1,0 +1,22 @@
+---- Keterangan Latihan 12 & 13 ----
+
+1. Keterangan
+   - Melakukan Post API
+   - Membuat Form Untuk Post API agar user dapat melakukan CRUD data
+   - Membuat sebuah handler/method ketika input/ketika form berubah
+   - Untuk mendapatkan nilai dari form yang kita input, kita bisa memanggil satu handlerFromChange dan kita memanggil sebuah event dimana ketika
+     kita trigger onChange pada suatu form, maka handlerFromChange aslinya mendapatkan sebuah event
+   - Setelah object yang sudah dibuat disiapkan lalu yang perlu dirubah adalah id dari setiap post yang ada, karena id ini harus selalu berubah
+     tidak boleh hanya satu, karna id satu itu ketika kita remove akan terjadi conflict karena dia menyasar id nya
+   - Untuk membuat id yang dinamis ada berbagai macam cara, cara yang akan digunakan adalah
+     - Menggunakan id menggunakan timestamp
+       - Timestamp itu adalah waktu saat ini, ketika disubmit / typing dia akan membuat sebuah timestamp yang baru
+   - Membuat button simpan, kita akan menyimpan object yang akan dibuat
+   - Untuk bisa mengurutkan data dari yang pertama kita input adalah kita bisa mengurutkan secara terbalik dimana id yang terakhir kita munculkan
+     di awal, caranya adalah dengan menggunakan GET /posts?_sort=user,views&_order=desc,asc dimana sort disini adalah kita spesifikan parameter mana
+     yang menjadi paramter untuk mengurutkan
+
+2. Pengertian Fungsi
+   - onChange
+     - Yang dimaksud dengan onChange adalah ketika terjadi perubahan pada input tersebut, maka kita melakukan sebuah action tertentu
+       

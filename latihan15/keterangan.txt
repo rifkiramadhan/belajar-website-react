@@ -1,0 +1,16 @@
+---- Keterangan Latihan 15 ----
+
+1. Keterangan
+   - Melakukan Pemanggilan API PUT
+     - Dimana kalau dalam istilah interaksi dengan API kita mengenal istilah CRUD, untuk Cread utu dengan POST, untuk Update akan kita 
+       pelajari dengan method PUT, untuk read sudah kita pelajari method GET, dan delete sudah kita pelajari dengan method DELETE
+   - Untuk menjalankan server
+     - yart start
+     - npx json-server --watch db.json --port 3004
+   - Untuk menggunakan method PUT dimana itu agak mirip dengan method DELETE, dimana memerlukan id yang mana id ini akan menjadi parameter
+     POST mana atau blockpost mana yang akan diupdate, sehingga ketika kita mengklik update kita harus mengirimkan id mana yang akan diupdate
+
+2. Pengertian Fungsi
+   - onChange
+     - Yang dimaksud dengan onChange adalah ketika terjadi perubahan pada input tersebut, maka kita melakukan sebuah action tertentu
+       
