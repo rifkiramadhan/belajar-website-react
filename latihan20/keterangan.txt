@@ -1,0 +1,58 @@
+---- Keterangan Latihan 20 ----
+1. Konsep dari React JS yaitu single page application
+   - Yang dimaksud single page application adalah web aplikasi yang dibuat sebenarnya
+     hanya dibuild dalam satu index.html, bahkan bisa kita sebutkan bahwa html yang dibuat
+     hanya satu, sedangkan halaman-halaman yang dibuat yang lainnya itu hanya manipulasi dari
+     javascript yang ada
+
+2. Routing dari pada React kita menggunakan library ketiga atau thread party, yaitu menggunakan
+   React Router, React router ini adalah library yang sangat familiar digunakan dalam project-project
+   React js, maka dari itu kita akan membuat antar halaman dalam single page application menggunakan
+   library React router
+
+3. Kita bisa menggunakan dokumentasi React router ini baik di web maupun di React native, karena
+   project pertama kita ini akan kita buat di web, maka kita akan mencoba dokumentasi web nya
+   - Link		: https://reactrouter.com/
+   - Link Web		: https://reactrouter.com/web/guides/quick-start
+   - React Router
+     - Kita dapat masuk ke halaman detail sesuai dengan params yang kita kirim, setelah params dikirim maka kita bisa memanipulasi
+       datanya menggunakan calling API
+   - State Management
+     - Redux
+       - Adalah third party atau library luar diluar dari React 
+     - Context
+       - Adalah state management yang langsung dibuat secara internal dalam React nya itu sendiri, sehingga kita tidak perlu menginmport
+         library lain atau third party lain
+
+4. Cara install React Router
+   - Setelah kita membuat aplikasi kita, ini adalah cara membuat aplikasi untuk perdana
+     - npx create-react-app demo-app
+     - cd demo-app
+   - Kemudian setelah selesai
+     - npm install react-router-dom
+   - Atau kita juga bisa menggunakan
+     - yarn add
+   - Kita tidak memerlukan untuk menjalankan json servernya karena kita akan konsen bagaimana
+     mengimplementasi React router, dimana katakan ketika kita ingin beralih halaman kita bisa
+     berpindah ke halaman lainnya dan ke halaman lainnya yang lebih dalam lagi
+   - Ketika kita menginstall react-router-dom kita juga perlu menginstall library lainnya yaitu
+     react-router dengan cara
+     - yarn add react-router
+   - react-router-dom & react-router adalah dua dependensi terpisah
+
+4. Cara Menjalankan React Router
+   - yarn start
+   - npx json-server --watch db.json --port 3004
+
+5. Pengertian
+   - props exact
+     - Artinya bahwa path yang ada di dalamnya harus sama persis atau exact, jadi setiap garis miring dia akan memanggil component nya
+   - Component Global
+     - Kita harus memasangnya tepat diatas tag Route pada file Home.jsx agar component dapat terlihat di semua url component
+   - Struktur Folder
+     - Pages
+       - Disinilah halaman-halaman React JS yang dibuat sehingga kita tidak rancu
+       - Home
+         - Adalah route pertama yang dipanggil oleh index
+
+   
