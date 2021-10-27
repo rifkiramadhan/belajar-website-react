@@ -1,0 +1,158 @@
+import React, {Component, Fragment} from 'react';
+import Post from '../../../component/Post/Post';
+import './BlogPost.css';
+import axios from 'axios';
+import API from '../../../services'
+
+class BlogPost extends Component {
+
+    // Siapkan state
+    state = {
+        post: [],
+        formBlogPost: {
+            id: 1,
+            title: '',
+            body: '',
+            userId: 1
+        },
+        isUpdate: false,
+        comments: []
+    }
+
+    getPostApi = () => {
+        // 2. Menggunakan Axios
+        API.getNewsBlog().then(result => {
+            this.setState({
+                post: result
+            })
+        })
+        API.getComments().then(result => {
+            this.setState({
+                comments: result
+            })
+        })
+    }
+
+    postDataToApi = () => {
+        API.postNewsBlog(this.state.formBlogPost).then((res) => {
+            // Memanggil data yang telah disubmit
+            this.getPostApi();
+            this.setState({
+                // isUpdate: false,
+                formBlogPost: {
+                    id: 1,
+                    title: '',
+                    body: '',
+                    userId: 1
+                },
+            })
+        })
+    }
+
+    PutDataToApi = () => {
+        API.updateNewsBlog(this.state.formBlogPost, this.state.formBlogPost.id).then(res => {
+            this.getPostApi();
+            this.setState({
+                isUpdate: false,
+                formBlogPost: {
+                    id: 1,
+                    title: '',
+                    body: '',
+                    userId: 1
+                },
+            })
+        })
+    }
+
+    handleRemove = (data) => {
+        API.deleteNewsBlog(data).then(res => {
+            this.getPostApi()
+        })
+    }
+
+    handleUdate = (data) => {
+        console.log(data);
+        this.setState({
+            formBlogPost: data,
+            isUpdate: true
+        })
+        // axios.put(`http://localhost:3004/posts/${data}`, this.state.formBlogPost).then(res => {
+        //     console.log(res);
+        //     this.getPostApi();
+        // })
+
+    }
+
+    // Membuat sebuah handler/method ketika input/ketika form berubah
+    handleFormChange = (event) => {
+        // console.log('form change', event.target);
+        let formBlogPostNew = {...this.state.formBlogPost};
+        let timestamp = new Date().getTime();
+        // console.log(timestamp);
+        
+        if(!this.state.isUpdate) {
+            formBlogPostNew['id'] = timestamp;
+
+        }
+
+        // console.log(event.target.name);
+        formBlogPostNew[event.target.name] = event.target.value;
+        // console.log('init state: ', this.state.formBlogPost);
+        // console.log('new value: ', formBlogPostNew);
+        // let title = event.target.value
+        this.setState({
+            formBlogPost: formBlogPostNew
+        }) 
+    }
+
+    handleSubmit = () => {
+        if(this.state.isUpdate) {
+            this.PutDataToApi();
+        }else{
+            this.postDataToApi();
+        }
+        // console.log(this.state.formBlogPost);
+    }
+
+    handleDetail = (id) => {
+        this.props.history.push(`/detail-post/${id}`);
+    }
+
+    // Ketika component berhasil dimounting
+    componentDidMount() {
+        // Remove fungsi code yang tidak digunakan
+        this.getPostApi();
+    }
+
+    // Kita akan memanggil API dari post ini
+    render() {
+        return(
+            <Fragment>
+                <p>Halaman Blog Post</p>
+                <hr />
+                <p className="section-title">Blog Post</p>
+                
+                <div className="form-add-post">
+                    <label className="title">Title</label>
+                    <input type="text" value={this.state.formBlogPost.title} name="title" placeholder="add title" onChange={this.handleFormChange}/>
+                    <label htmlFor="body">Blog Content</label>
+                    <textarea name="body" id="body" cols="30" rows="10" value={this.state.formBlogPost.body} placeholder="add blog content" onChange={this.handleFormChange}></textarea>
+                    <button className="btn-submit" onClick={this.handleSubmit}>Simpan</button>
+                </div>
+                {/* {
+                    this.state.comments.map(comment => {
+                        return <p>{comment.name} - {comment.email}</p>
+                    })
+                } */}
+                {
+                    this.state.post.map(post => {
+                        return <Post key={post.id} data={post} remove={this.handleRemove} update={this.handleUdate} goDetail={this.handleDetail} />
+
+                    })
+                }
+            </Fragment>
+        )
+    }
+}
+
+export default BlogPost;

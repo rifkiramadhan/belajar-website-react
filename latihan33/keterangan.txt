@@ -1,4 +1,4 @@
----- Keterangan Latihan 34 ----
+---- Keterangan Latihan 33 ----
 1. Konsep dari React JS yaitu single page application
    - Yang dimaksud single page application adalah web aplikasi yang dibuat sebenarnya
      hanya dibuild dalam satu index.html, bahkan bisa kita sebutkan bahwa html yang dibuat
@@ -86,11 +86,6 @@
      - Sedangkan pada react hooks ini stateless atau functional component juga bisa kita buat memiliki state
      - Dalam hooks kita juga bisa memiliki lifecycle nya sendiri, berbeda dengan class component yang memiliki render method kemudian component
        didmount, didupdate
-   - Side Effect
-     - Adalah apa yang bisa kita lakukan kepada component kita setelah component itu dimunculkan ke browser kita, nah disinilah kita menggunakan
-       side effect
-     - Kita bisa memanggil lifecycle di class component dengan hanya satu nama yaitu useEffect, jadi dengan menerapkan lifecycle pada hooks atau
-       useEffect kita menyebutnya, maka kita bisa menghemat codingan kita hanya dengan beberapa baris saja
 
 7. - API
      - GET
