@@ -1,5 +1,6 @@
 # React JS
-
+## Screenshot Aplikasi
+![Desktop Layout](screenshot/desktop-layout.PNG)
 ## Pengertian:
 ### React:
 - A JavaScript library for building user interfaces
